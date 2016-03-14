@@ -50,6 +50,8 @@ function hit() {
         console.log("Player won");
         console.log("Dealer lost");
     }
+    console.log("Player: "+count(playerHand));
+    console.log("Dealer: "+count(dealerHand));
 }
 
 function stand() {
@@ -63,6 +65,8 @@ function stand() {
         console.log("Player lost");
         console.log("Dealer won");
     }
+    console.log("Player: "+count(playerHand));
+    console.log("Dealer: "+count(dealerHand));
 }
 
 function count(hand) {

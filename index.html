@@ -2,10 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Simple Blackjack</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
     <script src="blackjack.js" type="text/javascript"></script>
 </head>
 <body>
+
+<div id="main">
+    <div id="dealer">
+        <div class="hand-value">
+            <h1>Hand value: <script>dealerHand()</script>
+            </h1>
+        </div>
+    </div>
+
+    <div id="player">
+        <div class="hand-value">
+            <h1>Hand value: <b onchange="playerHand()"></b>
+            </h1>
+        </div>
+        <div class="buttons" onclick="hit()"><h1>HIT</h1></div>
+        <div class="buttons" onclick="stand()"><h1>STAND</h1></div>
+
+    </div>
+</div>
 
 </body>
 </html>
