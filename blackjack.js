@@ -73,17 +73,34 @@ function count(hand) {
     return sum;
 }
 
-function checkHand(hand){
-    var count = count(hand);
-    if(count == 21){
+function checkPlayerHand(hand){
+    var counter = count(hand);
+    if(counter == 21){
+        console.log("Player won");
+        console.log("Dealer lost");
+    }
+    else if(counter > 21) {
+        console.log("Player lost");
+        console.log("Dealer won");
+    }
+}
 
+function checkDealerHand(hand){
+    var counter = count(hand);
+    if(counter == 21){
+        console.log("Player lost");
+        console.log("Dealer won");
+    }
+    else if (counter > 21){
+        console.log("Player won");
+        console.log("Dealer lost");
     }
 }
 
 
 startHand();
-checkHand(playerHand);
-checkHand(dealerHand);
 console.log("Player: "+count(playerHand));
 console.log("Dealer: "+count(dealerHand));
 
+checkPlayerHand(playerHand);
+checkDealerHand(dealerHand);
