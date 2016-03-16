@@ -39,16 +39,23 @@ function startHand() {
 
 function hit() {
     playerHand.push(cardBuilder());
-
     dealerHand.push(cardBuilder());
+
     if(count(playerHand)>21) {
         console.log("Player lost");
         console.log("Dealer won");
-
     }
     else if(count(playerHand)==21) {
         console.log("Player won");
         console.log("Dealer lost");
+    }
+    else if(count(dealerHand)>21) {
+        console.log("Player won");
+        console.log("Dealer lost");
+    }
+    else if(count(dealerHand)==21) {
+        console.log("Player lost");
+        console.log("Dealer won");
     }
     console.log("Player: "+count(playerHand));
     console.log("Dealer: "+count(dealerHand));
@@ -56,6 +63,7 @@ function hit() {
 
 function stand() {
     dealerHand.push(cardBuilder());
+
     count(dealerHand);
     if(count(dealerHand)>21) {
         console.log("Player won");
